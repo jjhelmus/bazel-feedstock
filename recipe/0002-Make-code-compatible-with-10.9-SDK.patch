@@ -1,16 +1,16 @@
-From 9735219083bb67f4dd8f4bb30562baae2b5a5157 Mon Sep 17 00:00:00 2001
+From 2a40e771e1c9e153d3225e19ff764be2ff5e2362 Mon Sep 17 00:00:00 2001
 From: Nehal J Wani <nehaljw.kkd1@gmail.com>
 Date: Thu, 26 Apr 2018 10:15:38 -0500
-Subject: [PATCH] Make code compatible with 10.9 SDK
+Subject: [PATCH 2/2] Make code compatible with 10.9 SDK
 
 - Use LSFindApplicationForInfo for locating xcode
 - Revert "Use a parameterized dict and simplify an iteration in xcode-locator."
 ---
- tools/osx/xcode_locator.m | 60 +++++++++++++++++++++++----------------
+ tools/osx/xcode_locator.m | 60 ++++++++++++++++++++++++++++-------------------
  1 file changed, 36 insertions(+), 24 deletions(-)
 
 diff --git a/tools/osx/xcode_locator.m b/tools/osx/xcode_locator.m
-index 6e318d7e56..fff0f2642a 100644
+index 6e318d7..fff0f26 100644
 --- a/tools/osx/xcode_locator.m
 +++ b/tools/osx/xcode_locator.m
 @@ -62,9 +62,8 @@
@@ -116,5 +116,5 @@ index 6e318d7e56..fff0f2642a 100644
      XcodeVersionEntry *entry = [dict objectForKey:versionArg];
      if (entry) {
 -- 
-2.19.1
+2.7.4
 

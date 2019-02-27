@@ -8,8 +8,8 @@ source:
   url: https://github.com/bazelbuild/bazel/releases/download/{{ version }}/bazel-{{ version }}-dist.zip
   sha256: 1945afa84fd8858b0a3c68c09915a4bc81065c61df2591387b2985e2297d30bd
   patches:
-    - 0002-allow-args-to-be-passed-to-bazel_build.patch  # [unix]
-    - 0005-Use-LSFindApplicationForInfo-for-locating-xcode.patch  # [osx]
+    - 0001-allow-args-to-be-passed-to-bazel_build.patch           # [unix]
+    - 0002-Use-LSFindApplicationForInfo-for-locating-xcode.patch  # [osx]
 
 build:
   number: 0
